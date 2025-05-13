@@ -5,8 +5,8 @@
          1 2 3 4 5    6 7 8 9 0
 )
 
-;; First I learnd Gallium, its infinitely better than qwerty, but something felt wrong.
-;; So I tried Graphite and found it noticebly more comfortable:
+;; First I learnd Gallium, its infinitely better than QWERTY, but something felt wrong.
+;; So I tried Graphite and found it noticeably more comfortable:
 ;; - C below home row feels much better than above it (and its pretty common letter)
 ;; - Y is much closer - left movement rather than diagonal left-top (common letter on word end)
 ;; - P is a little bit closer - down movement rather than left
@@ -16,7 +16,7 @@
 ;; So move it to right index like in Gallium.
 ;; Also swap QX to XQ (why not?)
 
-(deflayermap (galit)
+(deflayermap (graphium)
    q b   w l   e d   r w      t z                   y j   u f      i o   o u
    a n   s r   d t   f s      g g                   h y   j h      k a   l e   scln i
    z x   x q   c m   v c      b v                   n k   m p
