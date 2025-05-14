@@ -1,11 +1,4 @@
-(defsrc
-   esc q w e r t        y u i o p    bspc
-   tab a s d f g        h j k l scln bksl
-  lsft z x c v b        n m , . apos rsft
-         1 2 3 4 5    6 7 8 9 0
-)
-
-;; First I learnd Gallium, its infinitely better than QWERTY, but something felt wrong.
+;; First I learned Gallium, its infinitely better than QWERTY, but something felt wrong.
 ;; So I tried Graphite and found it noticeably more comfortable:
 ;; - C below home row feels much better than above it (and its pretty common letter)
 ;; - Y is much closer - left movement rather than diagonal left-top (common letter on word end)
@@ -14,12 +7,63 @@
 ;; The only problem was J:
 ;; Its probably fine in limited amounts (rare letter in real texts), but on trainer it was brutal.
 ;; So move it to right index like in Gallium.
-;; Also swap QX to XQ (why not?)
 
-(deflayer graphium
-      XX b l d w z     j f o u   XX XX
-      XX n r t s g     y h a e i    XX
-      XX x q m c v     k p XX XX XX XX
+(defsrc
+   esc q w e r t        y u i o p    bspc
+   tab a s d f g        h j k l scln bksl
+  lsft z x c v b        n m , . apos rsft
+         1 2 3 4 5    6 7 8 9 0
+)
 
-   XX XX lctl XX spc    ent XX lsft XX XX
+(defalias _na (layer-while-held numpad_arrows))
+(defalias _sy (layer-while-held symbols))
+
+(deflayer graphite
+         esc b l d w z     j f o u   XX del
+        lctl n r t s g     y h a e i    bspc
+          XX q x m c v     k p XX XX XX XX
+
+     XX XX lsft @_sy spc     ent @_na alt XX XX
+)
+
+(deflayer numpad_arrows
+       esc XX 6 5 4 XX     home pgdn pgup end  XX del
+      lctl  3 2 1 0 XX     left down  up  rght XX bspc
+        XX XX 7 8 9 XX     XX XX XX XX XX XX
+
+     XX XX lsft XX spc     ent XX alt XX XX
+)
+
+(defalias 
+  _em  S-1 ;; !
+  _at  S-2 ;; @
+  _ht  S-3 ;; #
+  _dl  S-4 ;; $
+  _ps  S-5 ;; %
+  _ct  S-6 ;; ^
+  _am  S-7 ;; &
+  _as  S-8 ;; *
+  _rbl S-9 ;; (
+  _rbr S-0 ;; )
+  _un  S-- ;; _
+  _pl  S-= ;; +
+  _cbl S-[ ;; {
+  _cbr S-] ;; }
+  _pp  S-\ ;; |
+  _co  S-; ;; :
+  _dq  S-' ;; "
+  _qm  S-/ ;; ?
+  _abl S-, ;; <
+  _abr S-. ;; >
+)
+
+;;          ` $ | & #    ] [ { } '
+;;          _ ! = , ?    : . ( ) ;
+;;          @ % * + \    / - < > "
+(deflayer symbols
+        esc `    @_dl @_pp @_am @_ht      ]    [ @_cbl @_cbr '    del
+       lctl @_un @_em =    ,    @_qm      @_co . @_rbl @_rbr ;    bspc
+         XX @_at @_ps @_as @_pl \         /    - @_abl @_abr @_dq XX
+
+                   XX XX lsft XX spc      ent XX alt XX XX
 )
