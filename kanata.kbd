@@ -4,35 +4,38 @@
 ;; - Y is much closer - left movement rather than diagonal left-top (common letter on word end)
 ;; - P is a little bit closer - down movement rather than left
 ;; Pretty small changes but it actually feels nicer.
-;; The only problem was J and B:
+;; The only problems were J and B:
 ;; So:
 ;; - Move J below home row
 ;; - Swap B and Q
 
 (defsrc
-   esc q w e r t        y u i o p    bspc
-   tab a s d f g        h j k l scln bksl
-  lsft z x c v b        n m , . apos rsft
-         1 2 3 4 5    6 7 8 9 0
+         esc q w e r t        y u i o p    del
+        lctl a s d f g        h j k l scln bspc
+         tab z x c v b        n m , . apos rsft
+
+          1 2 lsft 4 spc    ent 7 alt 9 0
 )
 
 (defalias _na (layer-while-held numpad_arrows))
 (defalias _sy (layer-while-held symbols))
 
 (deflayer graphite
-         esc q l d w z    XX f o  u  XX del
-        lctl n r t s g     y h a  e  i  bspc
-         tab b x m c v     k p XX XX j  XX
+
+         esc q l d w z        XX f o  u  XX del
+        lctl n r t s g         y h a  e  i  bspc
+         tab b x m c v         k p XX XX j  XX
 
      XX XX lsft @_sy spc     ent @_na alt XX XX
 )
 
 (deflayer numpad_arrows
-       esc XX 6 5 4 XX     home pgdn pgup end  XX del
-      lctl  3 2 1 0 XX     left down  up  rght XX bspc
-       tab XX 7 8 9 XX     XX XX XX XX XX XX
 
-     XX XX lsft XX spc     ent XX alt XX XX
+       esc XX 6 5 4 XX      home pgdn pgup end  XX del
+      lctl  3 2 1 0 XX      left down  up  rght XX bspc
+       tab XX 7 8 9 XX        XX XX    XX  XX   XX XX
+
+       XX XX lsft XX spc     ent XX alt XX XX
 )
 
 (defalias 
@@ -62,6 +65,7 @@
 ;;          _ ! = , ?    : . ( ) ;
 ;;          @ % * + \    / - < > "
 (deflayer symbols
+
         esc `    @_dl @_pp @_am @_ht      ]    [ @_cbl @_cbr '    del
        lctl @_un @_em =    ,    @_qm      @_co . @_rbl @_rbr ;    bspc
         tab @_at @_ps @_as @_pl \         /    - @_abl @_abr @_dq XX
