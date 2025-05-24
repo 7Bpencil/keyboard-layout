@@ -4,9 +4,8 @@
 ;; - Y is much closer - left movement rather than diagonal left-top (common letter on word end)
 ;; - P is a little bit closer - down movement rather than left
 ;; Pretty small changes but it actually feels nicer.
-;; The only problem was J:
-;; Its probably fine in limited amounts (rare letter in real texts), but on trainer it was brutal.
-;; So move it to right index like in Gallium.
+;; The only problem was J and B:
+;; So move J to right index like in Gallium and swap Z and B
 
 (defsrc
    esc q w e r t        y u i o p    bspc
@@ -19,7 +18,7 @@
 (defalias _sy (layer-while-held symbols))
 
 (deflayer graphite
-         esc b l d w z     j f o u   XX del
+         esc z l d w b     j f o u   XX del
         lctl n r t s g     y h a e i    bspc
          tab q x m c v     k p XX XX XX XX
 
