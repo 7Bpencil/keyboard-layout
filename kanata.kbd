@@ -5,7 +5,9 @@
 ;; - P is a little bit closer - down movement rather than left
 ;; Pretty small changes but it actually feels nicer.
 ;; The only problem was J and B:
-;; So move J to right index like in Gallium and swap Z and B
+;; So:
+;; - Move J below home row
+;; - Swap B and Q
 
 (defsrc
    esc q w e r t        y u i o p    bspc
@@ -18,9 +20,9 @@
 (defalias _sy (layer-while-held symbols))
 
 (deflayer graphite
-         esc z l d w b     j f o u   XX del
-        lctl n r t s g     y h a e i    bspc
-         tab q x m c v     k p XX XX XX XX
+         esc q l d w z    XX f o  u  XX del
+        lctl n r t s g     y h a  e  i  bspc
+         tab b x m c v     k p XX XX j  XX
 
      XX XX lsft @_sy spc     ent @_na alt XX XX
 )
