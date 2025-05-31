@@ -22,9 +22,9 @@
 
 (deflayer graphite
 
-         esc q l d w z         j f o  u  XX del
+         esc z l d w b         j f o  u  XX del
         lctl n r t s g         y h a  e  i  bspc
-         tab b x m c v         k p XX XX XX XX
+         tab q x m c v         k p XX XX XX XX
 
      XX XX lsft @_sy spc     ent @_na alt XX XX
 )
