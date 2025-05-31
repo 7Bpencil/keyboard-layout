@@ -64,11 +64,12 @@
 ;;          ` $ | & #    ] [ { } '
 ;;          _ ! = , ?    : . ( ) ;
 ;;          @ % * + \    / - < > "
+;;                           ^
 (deflayer symbols
 
         esc `    @_dl @_pp @_am @_ht      ]    [ @_cbl @_cbr '    del
        lctl @_un @_em =    ,    @_qm      @_co . @_rbl @_rbr ;    bspc
         tab @_at @_ps @_as @_pl \         /    - @_abl @_abr @_dq XX
 
-                   XX XX lsft XX spc      ent XX alt XX XX
+                   XX XX lsft XX spc      ent XX alt @_ct XX
 )
