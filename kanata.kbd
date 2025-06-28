@@ -1,14 +1,3 @@
-;; First I learned Gallium, its infinitely better than QWERTY, but something felt wrong.
-;; So I tried Graphite and found it noticeably more comfortable:
-;; - C below home row feels much better than above it (and its pretty common letter)
-;; - Y is much closer - left movement rather than diagonal left-top (common letter on word end)
-;; - P is a little bit closer - down movement rather than left
-;; Pretty small changes but it actually feels nicer.
-;; The only problems were J and B:
-;; So:
-;; - Move J below home row
-;; - Swap B and Q
-
 (defsrc
          esc q w e r t        y u i o p    del
         lctl a s d f g        h j k l scln bspc
