@@ -20,9 +20,9 @@
 
 (deflayer numpad_arrows
 
-       esc XX 6 5 4 XX      home pgdn pgup end  XX del
-      lctl  3 2 1 0 XX      left down  up  rght XX bspc
-       tab XX 7 8 9 XX        XX XX    XX  XX   XX XX
+       esc XX 6 5 4 XX        XX XX   pgup XX   XX del
+      lctl  3 2 1 0 XX      left down up   rght XX bspc
+       tab XX 7 8 9 XX      home pgdn XX   end  XX XX
 
        XX XX lsft XX spc     ent XX alt XX XX
 )
