@@ -1,3 +1,27 @@
+;; idea: no need for new layout, just duplicate math operators to numpad_arrows layer
+;;
+;;          X 9 8 7 X    ,    .    -    +    %
+;;          X 6 5 4 X    left down up   rght /
+;;          X 3 2 1 X    home pgdn pgup end  *
+;;                0
+
+;; idea: vim like arrows
+;; idea: letter layers do not have any symbols (keep punctuation to the same places for russian and english)
+;; idea: numbers and math operators must be on one layer, but on different sides (to reduce SFB)
+;; idea: rare symbols that do not form common bigrams with other symbols can be left into separate layer
+;; idea: helix has a lot of commands with alt modifier and only five with shift, so we should be able to press alt with symbols
+
+;;          ` { ( < [    ? 7 8 9 '
+;;          _ = . - *    : 4 5 6 ;
+;;          $ % , / +    ! 1 2 3 "
+;;                         0
+
+;;          ~ } ) > ]    X    X    X    X    X
+;;          ^ @ | & #    left down up   rght X
+;;          X X X \ X    home pgdn pgup end  X
+
+
+
 (defsrc
          esc q w e r t        y u i o p    del
         lctl a s d f g        h j k l scln bspc
