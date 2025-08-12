@@ -8,25 +8,6 @@
 
 (defalias _na (layer-while-held numpad_arrows))
 (defalias _sy (layer-while-held symbols))
-
-(deflayer graphite
-
-         esc q l d w b         j f o  u  XX del
-        lctl n r t s g         y h a  e  i  bspc
-         tab z x m c v         k p XX XX XX XX
-
-     XX XX lsft @_sy spc     ent @_na alt XX XX
-)
-
-(deflayer numpad_arrows
-
-       esc XX 6 5 4 XX        XX XX   XX   XX   XX del
-      lctl  3 2 1 0 XX      left down up   rght XX bspc
-       tab XX 7 8 9 XX      home pgdn pgup end  XX XX
-
-       XX XX lsft XX spc     ent XX alt XX XX
-)
-
 (defalias
   _em  S-1 ;; !
   _at  S-2 ;; @
@@ -49,6 +30,24 @@
   _abl S-, ;; <
   _abr S-. ;; >
   _td  S-` ;; ~
+)
+
+(deflayer graphite
+
+         esc q l d w b         j f o  u  XX del
+        lctl n r t s g         y h a  e  i  bspc
+         tab z x m c v         k p XX XX XX XX
+
+     XX XX lsft @_sy spc     ent @_na alt XX XX
+)
+
+(deflayer numpad_arrows
+
+       esc XX 6 5 4 XX        XX XX   XX   XX   XX del
+      lctl  3 2 1 0 XX      left down up   rght XX bspc
+       tab XX 7 8 9 XX      home pgdn pgup end  XX XX
+
+       XX XX lsft XX spc     ent XX alt XX XX
 )
 
 ;;          ` $ | & #    ] [ { } '
