@@ -41,19 +41,23 @@
      XX XX lsft @_sy spc     ent @_na alt XX XX
 )
 
+;;     / 7 8 9 -
+;;     0 1 2 3 .
+;;     * 6 5 4 +
+;;
 (deflayer numpad_arrows
 
-       esc XX 6 5 4 XX        XX XX   XX   XX   XX del
-      lctl  3 2 1 0 XX      left down up   rght XX bspc
-       tab XX 7 8 9 XX      home pgdn pgup end  XX XX
+       esc    / 7 8 9 -           XX XX   XX   XX   XX del
+      lctl    0 1 2 3 .         left down up   rght XX bspc
+       tab @_as 6 5 4 @_pl      home pgdn pgup end  XX XX
 
-       XX XX lsft XX spc     ent XX alt XX XX
+         XX XX lsft XX spc       ent XX alt XX XX
 )
 
-;;          ` $ | & #    ] [ { } '
-;;          _ : = , ?    ! . ( ) ;
-;;          @ % * / \    + - < > "
-;;                           ^ ~
+;;     ` $ | & #    ] [ { } '
+;;     _ : = , ?    ! . ( ) ;
+;;     @ % * / \    + - < > "
+;;                      ^ ~
 (deflayer symbols
 
         esc `    @_dl @_pp @_am @_ht      ]    [ @_cbl @_cbr '    del
