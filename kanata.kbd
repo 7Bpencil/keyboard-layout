@@ -6,8 +6,49 @@
           1 2 lsft 4 spc    ent 7 alt 9 0
 )
 
-(defalias _na (layer-while-held numpad_arrows))
-(defalias _sy (layer-while-held symbols))
+(defalias
+  _eng    (layer-switch eng_alphabet)
+  _rus    (layer-switch rus_alphabet)
+  _na     (layer-while-held numpad_arrows)
+  _sy     (layer-while-held symbols)
+  _sw_eng (multi lsft lalt 0 @_eng) ;; do not forget to setup it in OS
+  _sw_rus (multi lsft lalt 1 @_rus) ;; do not forget to setup it in OS
+)
+(defalias
+  й q
+  ц w
+  у e
+  к r
+  е t
+  н y
+  г u
+  ш i
+  щ o
+  з p
+  х [
+  ъ ]
+  ф a
+  ы s
+  в d
+  а f
+  п g
+  р h
+  о j
+  л k
+  д l
+  ж ;
+  э '
+  я z
+  ч x
+  с c
+  м v
+  и b
+  т n
+  ь m
+  б ,
+  ю .
+  ё `
+)
 (defalias
   _em  S-1 ;; !
   _at  S-2 ;; @
@@ -32,13 +73,22 @@
   _td  S-` ;; ~
 )
 
-(deflayer graphite
+(deflayer eng_alphabet
 
          esc q l d w b         j f o  u  XX del
         lctl n r t s g         y h a  e  i  bspc
          tab z x m c v         k p XX XX XX XX
 
-     XX XX lsft @_sy spc     ent @_na alt XX XX
+   @_sw_eng @_sw_rus lsft @_sy spc     ent @_na alt XX XX
+)
+
+(deflayer rus_alphabet
+
+     esc @й @ц @у @к @е      @н @г @ш @щ @з del
+    lctl @ф @ы @в @а @п      @р @о @л @д @ж bspc
+     tab @я @ч @с @м @и      @т @ь @б @ю XX XX
+
+   @_sw_eng @_sw_rus lsft XX spc  ent XX alt XX XX
 )
 
 ;;     / 7 8 9 -
