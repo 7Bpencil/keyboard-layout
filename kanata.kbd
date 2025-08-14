@@ -7,70 +7,115 @@
 )
 
 (defalias
-  _eng    (layer-switch eng_alphabet)
-  _rus    (layer-switch rus_alphabet)
-  _na     (layer-while-held numpad_arrows)
-  _sy     (layer-while-held symbols)
+  _eng    (layer-switch     eng_alphabet)
+  _eng_na (layer-while-held eng_numpad_arrows)
+  _eng_sy (layer-while-held eng_symbols)
+  _rus    (layer-switch     rus_alphabet)
+  _rus_na (layer-while-held rus_numpad_arrows)
+  _rus_sy (layer-while-held rus_symbols)
   _sw_eng (multi lsft lalt 0 @_eng) ;; do not forget to setup it in OS
   _sw_rus (multi lsft lalt 1 @_rus) ;; do not forget to setup it in OS
 )
 (defalias
-  й q
-  ц w
-  у e
-  к r
-  е t
-  н y
-  г u
-  ш i
-  щ o
-  з p
-  х [
-  ъ ]
-  ф a
-  ы s
-  в d
-  а f
-  п g
-  р h
-  о j
-  л k
-  д l
-  ж ;
-  э '
-  я z
-  ч x
-  с c
-  м v
-  и b
-  т n
-  ь m
-  б ,
-  ю .
-  ё `
+  _й q
+  _ц w
+  _у e
+  _к r
+  _е t
+  _н y
+  _г u
+  _ш i
+  _щ o
+  _з p
+  _х [
+  _ъ ]
+  _ф a
+  _ы s
+  _в d
+  _а f
+  _п g
+  _р h
+  _о j
+  _л k
+  _д l
+  _ж ;
+  _э '
+  _я z
+  _ч x
+  _с c
+  _м v
+  _и b
+  _т n
+  _ь m
+  _б ,
+  _ю .
+  _ё `
 )
 (defalias
-  _em  S-1 ;; !
-  _at  S-2 ;; @
-  _ht  S-3 ;; #
-  _dl  S-4 ;; $
-  _ps  S-5 ;; %
-  _ct  S-6 ;; ^
-  _am  S-7 ;; &
-  _as  S-8 ;; *
-  _rbl S-9 ;; (
-  _rbr S-0 ;; )
-  _un  S-- ;; _
-  _pl  S-= ;; +
-  _cbl S-[ ;; {
-  _cbr S-] ;; }
-  _pp  S-\ ;; |
-  _co  S-; ;; :
-  _dq  S-' ;; "
-  _qm  S-/ ;; ?
-  _abl S-, ;; <
-  _abr S-. ;; >
-  _td  S-` ;; ~
+  _eng_! S-1
+  _rus_! S-1
+  _eng_@ S-2
+  _rus_@  XX
+  _eng_# S-3
+  _rus_#  XX
+  _eng_$ S-4
+  _rus_$  XX
+  _eng_% S-5
+  _rus_% S-5
+  _eng_^ S-6
+  _rus_^  XX
+  _eng_& S-7
+  _rus_&  XX
+  _eng_* S-8
+  _rus_* S-8
+  _eng_⸨ S-9 ;; (
+  _rus_⸨ S-9 ;; (
+  _eng_⸩ S-0 ;; )
+  _rus_⸩ S-0 ;; )
+  _eng_-   -
+  _rus_-   -
+  _eng__ S--
+  _rus__ S--
+  _eng_=   =
+  _rus_=   =
+  _eng_+ S-=
+  _rus_+ S-=
+  _eng_[   [
+  _rus_[  XX
+  _eng_]   ]
+  _rus_]  XX
+  _eng_{ S-[
+  _rus_{  XX
+  _eng_} S-]
+  _rus_}  XX
+  _eng_| S-\
+  _rus_|  XX
+  _eng_: S-;
+  _rus_: S-6
+  _eng_“ S-' ;; "
+  _rus_“ S-2 ;; "
+  _eng_? S-/
+  _rus_? S-7
+  _eng_< S-,
+  _rus_<  XX
+  _eng_> S-.
+  _rus_>  XX
+  _eng_~ S-`
+  _rus_~  XX
+  _eng_/   /
+  _rus_/ S-\
+  _eng_\   \
+  _rus_\   \
+  _eng_.   .
+  _rus_.   /
+  _eng_,   ,
+  _rus_, S-/
+  _eng_'   '
+  _rus_'  XX
+  _eng_;   ;
+  _rus_; S-4
+  _eng_`   `
+  _rus_`  XX
 )
 
 (deflayer eng_alphabet
@@ -79,40 +124,59 @@
         lctl n r t s g         y h a  e  i  bspc
          tab z x m c v         k p XX XX XX XX
 
-   @_sw_eng @_sw_rus lsft @_sy spc     ent @_na alt XX XX
+   @_sw_eng @_sw_rus lsft @_eng_sy spc     ent @_eng_na alt XX XX
 )
 
 (deflayer rus_alphabet
 
-     esc @й @ц @у @к @е      @н @г @ш @щ @з del
-    lctl @ф @ы @в @а @п      @р @о @л @д @ж bspc
-     tab @я @ч @с @м @и      @т @ь @б @ю XX XX
+     esc @_й @_ц @_у @_к @_е      @_н @_г @_ш @_щ @_з del
+    lctl @_ф @_ы @_в @_а @_п      @_р @_о @_л @_д @_ж bspc
+     tab @_я @_ч @_с @_м @_и      @_т @_ь @_б @_ю XX XX
 
-   @_sw_eng @_sw_rus lsft XX spc  ent XX alt XX XX
+   @_sw_eng @_sw_rus lsft @_rus_sy spc  ent @_rus_na alt XX XX
 )
 
 ;;     / 7 8 9 -
 ;;     0 1 2 3 .
 ;;     * 6 5 4 +
-;;
-(deflayer numpad_arrows
 
-       esc    / 7 8 9 -           XX XX   XX   XX   XX del
-      lctl    0 1 2 3 .         left down up   rght XX bspc
-       tab @_as 6 5 4 @_pl      home pgdn pgup end  XX XX
+(deflayer eng_numpad_arrows
 
-         XX XX lsft XX spc       ent XX alt XX XX
+       esc @_eng_/ 7 8 9 @_eng_-        XX XX   XX   XX   XX del
+      lctl       0 1 2 3 @_eng_.      left down up   rght XX bspc
+       tab @_eng_* 6 5 4 @_eng_+      home pgdn pgup end  XX XX
+
+               XX XX lsft XX spc      ent XX alt XX XX
+)
+
+(deflayer rus_numpad_arrows
+
+       esc @_rus_/ 7 8 9 @_rus_-        XX XX   XX   XX   XX del
+      lctl       0 1 2 3 @_rus_.      left down up   rght XX bspc
+       tab @_rus_* 6 5 4 @_rus_+      home pgdn pgup end  XX XX
+
+               XX XX lsft XX spc      ent XX alt XX XX
 )
 
 ;;     ` $ | & #    ] [ { } '
 ;;     _ : = , ?    ! . ( ) ;
 ;;     @ % * / \    + - < > "
 ;;                      ^ ~
-(deflayer symbols
 
-        esc `    @_dl @_pp @_am @_ht      ]    [ @_cbl @_cbr '    del
-       lctl @_un @_co =    ,    @_qm      @_em . @_rbl @_rbr ;    bspc
-        tab @_at @_ps @_as /    \         @_pl - @_abl @_abr @_dq XX
+(deflayer eng_symbols
 
-                   XX XX lsft XX spc      ent XX alt @_ct @_td
+        esc @_eng_` @_eng_$ @_eng_| @_eng_& @_eng_#        @_eng_] @_eng_[ @_eng_{ @_eng_} @_eng_' del
+       lctl @_eng__ @_eng_: @_eng_= @_eng_, @_eng_?        @_eng_! @_eng_. @_eng_⸨ @_eng_⸩ @_eng_; bspc
+        tab @_eng_@ @_eng_% @_eng_* @_eng_/ @_eng_\        @_eng_+ @_eng_- @_eng_< @_eng_> @_eng_“ XX
+
+                                  XX XX lsft XX spc        ent XX alt @_eng_^ @_eng_~
+)
+
+(deflayer rus_symbols
+
+        esc @_rus_` @_rus_$ @_rus_| @_rus_& @_rus_#        @_rus_] @_rus_[ @_rus_{ @_rus_} @_rus_' del
+       lctl @_rus__ @_rus_: @_rus_= @_rus_, @_rus_?        @_rus_! @_rus_. @_rus_⸨ @_rus_⸩ @_rus_; bspc
+        tab @_rus_@ @_rus_% @_rus_* @_rus_/ @_rus_\        @_rus_+ @_rus_- @_rus_< @_rus_> @_rus_“ XX
+
+                                  XX XX lsft XX spc        ent XX alt @_rus_^ @_rus_~
 )
