@@ -130,20 +130,20 @@
 
 (deflayer rus_alphabet
 
-     esc @_й @_к @_д @_ч @_ц      @_ш @_з @_а @_у @_ю del
-    lctl @_в @_н @_т @_р @_х      @_ж @_с @_о @_и @_е bspc
-     tab @_б @_м @_п @_л @_ф      @_э @_г @_ы @_ь @_я XX
+     esc @_ю @_у @_а @_з @_ш      @_ц @_ч @_д @_к @_й del
+    lctl @_е @_и @_о @_с @_ж      @_х @_р @_т @_н @_в bspc
+     tab @_я @_ь @_ы @_г @_э      @_ф @_л @_м @_п @_б XX
 
    @_sw_eng @_sw_rus lsft @_rus_sy spc  ent @_rus_na @_rus_sup XX XX
 )
 
 (deflayer rus_alphabet_sup
 
-     esc XX XX XX XX XX      @_щ XX XX XX  XX  del
-    lctl XX XX XX XX XX      XX  XX XX XX  @_ё bspc
-     tab XX XX XX XX XX      XX  XX XX @_ъ XX  XX
+     esc XX  XX  XX XX @_щ     XX XX XX XX XX del
+    lctl @_ё XX  XX XX XX      XX XX XX XX XX bspc
+     tab XX  @_ъ XX XX XX      XX XX XX XX XX XX
 
-	   XX XX lsft XX spc     ent XX XX XX XX
+	     XX XX lsft XX spc    ent XX XX XX XX
 )
 
 ;;     / 7 8 9 -
