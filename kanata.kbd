@@ -11,9 +11,10 @@
   _eng_na  (layer-while-held eng_numpad_arrows)
   _eng_sy  (layer-while-held eng_symbols)
   _rus     (layer-switch     rus_alphabet)
-  _rus_sup (layer-while-held rus_alphabet_sup)
+  _rus_sup (multi lalt (layer-while-held rus_alphabet_sup))
   _rus_na  (layer-while-held rus_numpad_arrows)
   _rus_sy  (layer-while-held rus_symbols)
+  _rus_shc (multi lctl (layer-while-held rus_shortcut))
   _sw_eng  (multi lsft lalt 0 @_eng) ;; do not forget to setup it in OS
   _sw_rus  (multi lsft lalt 1 @_rus) ;; do not forget to setup it in OS
 )
@@ -51,6 +52,11 @@
   _б ,
   _ю .
   _ё `
+)
+(defalias
+  _щ_sup (multi (release-key alt) @_щ)
+  _ъ_sup (multi (release-key alt) @_ъ)
+  _ё_sup (multi (release-key alt) @_ё)
 )
 (defalias
   _eng_! S-1
@@ -130,20 +136,29 @@
 
 (deflayer rus_alphabet
 
-     esc @_ю @_у @_а @_з @_ш      @_ц @_ч @_д @_к @_й del
-    lctl @_е @_и @_о @_с @_ж      @_х @_р @_т @_н @_в bspc
-     tab @_я @_ь @_ы @_г @_э      @_ф @_л @_м @_п @_б XX
+      esc @_ю @_у @_а @_з @_ш      @_ц @_ч @_д @_к @_й del
+@_rus_shc @_е @_и @_о @_с @_ж      @_х @_р @_т @_н @_в bspc
+      tab @_я @_ь @_ы @_г @_э      @_ф @_л @_м @_п @_б XX
 
    @_sw_eng @_sw_rus lsft @_rus_sy spc  ent @_rus_na @_rus_sup XX XX
 )
 
 (deflayer rus_alphabet_sup
 
-     esc XX  XX  XX XX @_щ     XX XX XX XX XX del
-    lctl @_ё XX  XX XX XX      XX XX XX XX XX bspc
-     tab XX  @_ъ XX XX XX      XX XX XX XX XX XX
+     esc XX      XX      XX XX @_щ_sup     XX XX XX XX XX del
+    lctl @_ё_sup XX      XX XX XX          XX XX XX XX XX bspc
+     tab XX      @_ъ_sup XX XX XX          XX XX XX XX XX XX
 
-	     XX XX lsft XX spc    ent XX XX XX XX
+	             XX XX lsft XX spc        ent XX XX XX XX
+)
+
+(deflayer rus_shortcut
+
+         esc XX XX XX XX XX         XX f  XX XX XX del
+          XX XX XX XX XX XX         XX XX a  XX XX bspc
+         tab z  x  XX c  v          XX XX XX XX XX XX
+
+           XX XX lsft XX spc       ent @_rus_na alt XX XX
 )
 
 ;;     / 7 8 9 -
