@@ -162,13 +162,13 @@
 )
 
 ;;     / 7 8 9 -
-;;     0 1 2 3 .
+;;     0 3 2 1 .
 ;;     * 6 5 4 +
 
 (deflayer eng_numpad_arrows
 
        esc @_eng_/ 7 8 9 @_eng_-        XX XX   XX   XX   XX del
-      lctl       0 1 2 3 @_eng_.      left down up   rght XX bspc
+      lctl       0 3 2 1 @_eng_.      left down up   rght XX bspc
        tab @_eng_* 6 5 4 @_eng_+      home pgdn pgup end  XX XX
 
                XX XX lsft XX spc      ent XX alt XX XX
@@ -177,7 +177,7 @@
 (deflayer rus_numpad_arrows
 
        esc @_rus_/ 7 8 9 @_rus_-        XX XX   XX   XX   XX del
-      lctl       0 1 2 3 @_rus_.      left down up   rght XX bspc
+      lctl       0 3 2 1 @_rus_.      left down up   rght XX bspc
        tab @_rus_* 6 5 4 @_rus_+      home pgdn pgup end  XX XX
 
                XX XX lsft XX spc      ent XX alt XX XX
