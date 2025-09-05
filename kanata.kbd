@@ -155,7 +155,7 @@
 (deflayer rus_shortcut
 
          esc XX XX XX XX XX         XX f  XX XX XX del
-          XX XX XX XX XX XX         XX XX a  XX XX bspc
+          XX XX XX XX s  XX         XX XX a  XX XX bspc
          tab z  x  XX c  v          XX XX XX XX XX XX
 
            XX XX lsft XX spc       ent @_rus_na alt XX XX
