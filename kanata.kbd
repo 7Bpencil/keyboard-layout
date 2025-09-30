@@ -2,8 +2,9 @@
          esc q w e r t        y u i o p    del
         lctl a s d f g        h j k l scln bspc
          tab z x c v b        n m , . apos rsft
+               1 2                9 0
 
-          1 2 lsft 4 spc    ent 7 alt 9 0
+              lsft 4 spc    ent 7 alt
 )
 
 (defalias
@@ -134,8 +135,9 @@
                        esc q l d w b        j f o u • del
                       lctl n r t s g        y h a e i  bspc
                        tab z x m c v        k p • • • •
+                      @_sw_eng @_sw_rus         • •
 
-   @_sw_eng @_sw_rus lsft @_eng_sy spc    ent @_eng_na alt • •
+                     lsft @_eng_sy spc    ent @_eng_na alt
 )
 
 (deflayer rus_alphabet
@@ -143,8 +145,9 @@
              esc @_ю @_у @_а @_з @_ш      @_ц @_ч @_д @_к @_й del
        @_rus_shc @_е @_и @_о @_с @_ж      @_х @_р @_т @_н @_в bspc
              tab @_я @_ь @_ы @_г @_э      @_ф @_л @_м @_п @_б •
+                @_sw_eng @_sw_rus                 •   •
 
-   @_sw_eng @_sw_rus lsft @_rus_sy spc    ent @_rus_na @_rus_sup • •
+                   lsft @_rus_sy spc      ent @_rus_na @_rus_sup
 )
 
 (deflayer rus_alphabet_sup
@@ -152,8 +155,9 @@
      esc •       •       • • @_щ_sup    • • • • • del
     lctl @_ё_sup •       • • •          • • • • • bspc
      tab •       @_ъ_sup • • •          • • • • • •
+                 •       •                  • •
 
-                  • • lsft • spc      ent • • • •
+                      lsft • spc      ent • •
 )
 
 (deflayer rus_shortcut
@@ -161,8 +165,9 @@
          esc • • • • •         • f • • • del
            • • • • s •         • • a • • bspc
          tab z x • c v         • • • • • •
+               • •                 • •
 
-          • • lsft • spc     ent @_rus_na alt • •
+              lsft • spc     ent @_rus_na alt
 )
 
 (deflayer eng_numpad_arrows
@@ -170,8 +175,9 @@
        esc @_eng_/ 7 8 9 @_eng_-         • •    •    •    • del
       lctl       0 3 2 1 @_eng_.      left down up   rght • bspc
        tab @_eng_* 6 5 4 @_eng_+      home pgdn pgup end  • •
+                   • •                          •    •
 
-                    • • lsft • spc     ent • alt • •
+                        lsft • spc     ent • alt
 )
 
 (deflayer rus_numpad_arrows
@@ -179,8 +185,9 @@
        esc @_rus_/ 7 8 9 @_rus_-         • •    •    •    • del
       lctl       0 3 2 1 @_rus_.      left down up   rght • bspc
        tab @_rus_* 6 5 4 @_rus_+      home pgdn pgup end  • •
+                   • •                          •    •
 
-                    • • lsft • spc     ent • alt • •
+                        lsft • spc     ent • alt
 )
 
 (deflayer eng_symbols
@@ -188,8 +195,9 @@
         esc @_eng_` @_eng_$ @_eng_| @_eng_& @_eng_#        @_eng_] @_eng_[ @_eng_{ @_eng_} @_eng_' del
        lctl @_eng__ @_eng_: @_eng_= @_eng_, @_eng_?        @_eng_! @_eng_. @_eng_⸨ @_eng_⸩ @_eng_; bspc
         tab @_eng_@ @_eng_% @_eng_* @_eng_/ @_eng_\        @_eng_+ @_eng_- @_eng_< @_eng_> @_eng_“ •
+                    •       •                                              @_eng_^ @_eng_~
 
-                                       • • lsft • spc          ent • alt @_eng_^ @_eng_~
+                                           lsft • spc          ent • alt
 )
 
 (deflayer rus_symbols
@@ -197,6 +205,7 @@
         esc @_rus_` @_rus_$ @_rus_| @_rus_& @_rus_#        @_rus_] @_rus_[ @_rus_{ @_rus_} @_rus_' del
        lctl @_rus__ @_rus_: @_rus_= @_rus_, @_rus_?        @_rus_! @_rus_. @_rus_⸨ @_rus_⸩ @_rus_; bspc
         tab @_rus_@ @_rus_% @_rus_* @_rus_/ @_rus_\        @_rus_+ @_rus_- @_rus_< @_rus_> @_rus_“ •
+                    •       •                                              @_rus_^ @_rus_~
 
-                                       • • lsft • spc          ent • alt @_rus_^ @_rus_~
+                                           lsft • spc          ent • alt
 )
