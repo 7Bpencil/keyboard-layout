@@ -165,10 +165,6 @@
           • • lsft • spc     ent @_rus_na alt • •
 )
 
-;;     / 7 8 9 -
-;;     0 3 2 1 .
-;;     * 6 5 4 +
-
 (deflayer eng_numpad_arrows
 
        esc @_eng_/ 7 8 9 @_eng_-         • •    •    •    • del
@@ -186,11 +182,6 @@
 
                     • • lsft • spc     ent • alt • •
 )
-
-;;     ` $ | & #    ] [ { } '
-;;     _ : = , ?    ! . ( ) ;
-;;     @ % * / \    + - < > "
-;;                      ^ ~
 
 (deflayer eng_symbols
 
