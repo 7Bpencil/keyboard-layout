@@ -7,6 +7,9 @@
 )
 
 (defalias
+
+;; layers
+
   _eng     (layer-switch     eng_alphabet)
   _eng_na  (layer-while-held eng_numpad_arrows)
   _eng_sy  (layer-while-held eng_symbols)
@@ -17,8 +20,9 @@
   _rus_shc (multi lctl (layer-while-held rus_shortcut))
   _sw_eng  (multi lsft lalt 0 @_eng) ;; do not forget to setup it in OS
   _sw_rus  (multi lsft lalt 1 @_rus) ;; do not forget to setup it in OS
-)
-(defalias
+
+;; russian alphabet
+
   _й q
   _ц w
   _у e
@@ -52,13 +56,13 @@
   _б ,
   _ю .
   _ё `
-)
-(defalias
+
   _щ_sup (multi (release-key alt) @_щ)
   _ъ_sup (multi (release-key alt) @_ъ)
   _ё_sup (multi (release-key alt) @_ё)
-)
-(defalias
+
+;; symbols
+
   _eng_! S-1
   _rus_! S-1
   _eng_@ S-2
