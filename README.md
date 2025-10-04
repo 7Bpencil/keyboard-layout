@@ -30,9 +30,9 @@ Russian layer sup (idea from [Universal Layout](https://github.com/braindefender
 
 Numpad + Navigation layer:
 ```
-      esc / 7 8 9 -        • •    •    •    • del
+      esc • 7 8 9 •        • •    •    •    • del
      lctl 0 3 2 1 .     left down up   rght • bspc
-      tab * 6 5 4 +     home pgdn pgup end  • •
+      tab • 6 5 4 •     home pgdn pgup end  • •
             • •                   •    •
 
            lsft • spc    ent • alt

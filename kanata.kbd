@@ -172,22 +172,22 @@
 
 (deflayer eng_numpad_arrows
 
-       esc @_eng_/ 7 8 9 @_eng_-         • •    •    •    • del
-      lctl       0 3 2 1 @_eng_.      left down up   rght • bspc
-       tab @_eng_* 6 5 4 @_eng_+      home pgdn pgup end  • •
-                   • •                          •    •
+       esc • 7 8 9 •               • •    •    •    • del
+      lctl 0 3 2 1 @_eng_.      left down up   rght • bspc
+       tab • 6 5 4 •            home pgdn pgup end  • •
+             • •                          •    •
 
-                        lsft • spc     ent • alt
+            lsft • spc           ent • alt
 )
 
 (deflayer rus_numpad_arrows
 
-       esc @_rus_/ 7 8 9 @_rus_-         • •    •    •    • del
-      lctl       0 3 2 1 @_rus_.      left down up   rght • bspc
-       tab @_rus_* 6 5 4 @_rus_+      home pgdn pgup end  • •
-                   • •                          •    •
+       esc • 7 8 9 •               • •    •    •    • del
+      lctl 0 3 2 1 @_rus_.      left down up   rght • bspc
+       tab • 6 5 4 •            home pgdn pgup end  • •
+             • •                          •    •
 
-                        lsft • spc     ent • alt
+            lsft • spc           ent • alt
 )
 
 (deflayer eng_symbols
