@@ -35,7 +35,17 @@ Numpad + Navigation layer:
       tab • 6 5 4 •     home pgdn pgup end  • •
             • •                   •    •
 
-           lsft • spc    ent • alt
+         lsft fun spc    ent • alt
+```
+
+Functional layer:
+```
+      esc • f7 f8 f9 •        • •   •   •   •   del
+     lctl • f3 f2 f1 •        • f11 f12 f13 f10 bspc
+      tab • f6 f5 f4 •        • •   •   •   •   •
+          lmet •                    •   •
+
+              lsft • spc    ent • alt
 ```
 
 Symbols layer:
